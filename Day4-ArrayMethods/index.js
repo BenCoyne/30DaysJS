@@ -68,3 +68,9 @@ const fifteen = inventors.filter(
 const fullnames = inventors.map(
 	(inventor) => `${inventor.first} ${inventor.last}`
 );
+
+// 3) Sort the inventors by age (oldest to youngest).
+
+const ageOrder = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+
+console.log(ageOrder);
