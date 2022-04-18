@@ -88,8 +88,18 @@ const oldest = inventors.sort((a, b) =>
 // 6) create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
-const category = document.querySelector(".mw-category");
-const links = [...category.querySelectorAll("a")];
-const de = links
-	.map((link) => link.textContent)
-	.filter((boulevard) => boulevard.includes("de"));
+// run on wiki console
+
+// const category = document.querySelector(".mw-category");
+// const links = [...category.querySelectorAll("a")];
+// const de = links
+// 	.map((link) => link.textContent)
+// 	.filter((boulevard) => boulevard.includes("de"));
+
+// 7) sort people by last name
+
+const lastNames = people.sort((lastPerson, nextPerson) => {
+	const [aSurname, aFirst] = lastPerson.split(", ");
+	const [bSurname, bFirst] = nextPerson.split(", ");
+	return aSurname > bSurname ? 1 : -1;
+});
