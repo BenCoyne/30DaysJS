@@ -62,3 +62,9 @@ const people = [
 const fifteen = inventors.filter(
 	(inventor) => inventor.year > 1500 && inventor.year < 1600
 );
+
+// 2) Create an array of the inventor's fullnames using map.
+
+const fullnames = inventors.map(
+	(inventor) => `${inventor.first} ${inventor.last}`
+);
