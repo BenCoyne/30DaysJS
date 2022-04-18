@@ -74,3 +74,11 @@ const fullnames = inventors.map(
 const ageOrder = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
 
 console.log(ageOrder);
+
+// 4) Total the years lived of all inventors using reduce.
+
+const yearsLived = inventors.reducce((total, inventor) => {
+	total += inventor.passed - inventor.year;
+}, 0);
+
+console.log(yearsLived);
