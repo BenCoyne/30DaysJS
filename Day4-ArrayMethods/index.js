@@ -78,3 +78,9 @@ const ageOrder = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
 const yearsLived = inventors.reduce((total, inventor) => {
 	return (total += inventor.passed - inventor.year);
 }, 0);
+
+//  5) Sort the inventors by years lived.
+
+const oldest = inventors.sort((a, b) =>
+	a.passed - a.year < b.passed - b.year ? 1 : -1
+);
